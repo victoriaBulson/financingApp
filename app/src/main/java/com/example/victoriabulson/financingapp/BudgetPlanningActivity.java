@@ -8,6 +8,6 @@ public class BudgetPlanningActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_budgetting_planning);
+        setContentView(R.layout.activity_budget_planning);
     }
 }

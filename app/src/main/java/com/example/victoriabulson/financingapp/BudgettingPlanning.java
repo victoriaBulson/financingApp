@@ -3,7 +3,7 @@ package com.example.victoriabulson.financingapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class BudgetPlanningActivity extends AppCompatActivity {
+public class BudgettingPlanning extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClick(View view){
-        Intent mintent = new Intent(MainActivity.this, BudgetPlanningActivity.class);
+        Intent mintent = new Intent(MainActivity.this, BudgettingPlanning.class);
         startActivity(mintent);
     }
 }

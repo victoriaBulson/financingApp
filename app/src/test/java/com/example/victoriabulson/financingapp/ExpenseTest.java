@@ -9,9 +9,15 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class ExpenseTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void test_expense(){
+        Expense rentObject = new Expense();
+        //TEST CATEGORY NAME
+        rentObject.setCategoryName("rent");
+        assert("rent" == rentObject.getCategoryName());
+
     }
+
+
 }

@@ -7,6 +7,19 @@
     tools:context=".BudgetPlanning">
 
     <EditText
+        android:id="@+id/rentTxt"
+        android:layout_width="224dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/Rent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/foodTxt"
         android:layout_width="224dp"
         android:layout_height="41dp"
@@ -16,18 +29,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/Food"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/rentTxt"
-        android:layout_width="224dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="8dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/Rent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

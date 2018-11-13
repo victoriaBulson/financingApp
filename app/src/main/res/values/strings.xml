@@ -6,4 +6,15 @@
     <string name="updateButtonTxt">Update</string>
     <string name="reportButtonTxt">Detailed Report</string>
     <string name="planBudgetButtonTxt">Plan Budget</string>
+    <string name="Food">Food and Groceries</string>
+    <string name="Transportation">Transportation</string>
+    <string name="Utilities">Utilities</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="PersonalCare">Personal Care</string>
+    <string name="HealthCare">Health Care</string>
+    <string name="EmergencyFund">Emergency Fund</string>
+    <string name="Savings">Savings</string>
+    <string name="Other">Other</string>
+    <string name="Debt">Debt</string>
+    <string name="Rent">Rent</string>
 </resources>

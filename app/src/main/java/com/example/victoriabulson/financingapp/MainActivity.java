@@ -1,11 +1,19 @@
 package com.example.victoriabulson.financingapp;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,10 +23,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    public void buttonClick(View view){
-        Intent plannerIntent = new Intent(MainActivity.this, BudgetPlanning.class);
 
         List<Expense> expenseList = new ArrayList<>(11);
         Expense rentObject = new Expense(getString(R.string.Rent));
@@ -44,8 +48,16 @@ public class MainActivity extends AppCompatActivity {
         Expense otherObject = new Expense(getString(R.string.Other));
         expenseList.add(otherObject);
 
+        try {
+            JSONObject arrayToPass = new JSONObject(String.valueOf(expenseList));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
-        //plannerIntent.putExtra(EXPENSE_ARRAY, expenseList);
+    }
+
+    public void buttonClick(View view){
+        Intent plannerIntent = new Intent(MainActivity.this, BudgetPlanning.class);
         startActivity(plannerIntent);
     }
 }

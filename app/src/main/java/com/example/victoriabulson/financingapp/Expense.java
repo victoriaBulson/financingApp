@@ -3,9 +3,36 @@ package com.example.victoriabulson.financingapp;
 class Expense {
 
     private String categoryName;
-    private double budget = 0;
-    private double spent = 0;
-    private boolean fixed = false;
+    private double budget;
+    private double spent;
+    private boolean fixed;
+    private boolean beingUsed;
+
+    public Expense(){
+        categoryName = null;
+        budget = 0;
+        spent = 0;
+        fixed = false;
+        beingUsed = true;
+    }
+
+
+    public Expense(String category){
+        setCategoryName(category);
+        budget = 0;
+        spent = 0;
+        fixed = false;
+        beingUsed = true;
+    }
+
+
+    private void setUsed(boolean isUsed) {
+        beingUsed = isUsed;
+    }
+
+    private boolean getUsed() {
+        return beingUsed;
+    }
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;

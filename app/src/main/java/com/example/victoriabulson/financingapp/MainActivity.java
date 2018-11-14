@@ -2,11 +2,14 @@ package com.example.victoriabulson.financingapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,12 +22,16 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    public SharedPreferences savedBudget;
+    public String sharedPrefFile = "savedBudget";
+    public List<Expense> expenseList = new ArrayList<>(11);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Expense> expenseList = new ArrayList<>(11);
+
         Expense rentObject = new Expense(getString(R.string.Rent));
         expenseList.add(rentObject);
         Expense transportObject = new Expense(getString(R.string.Transportation));
@@ -48,12 +55,19 @@ public class MainActivity extends AppCompatActivity {
         Expense otherObject = new Expense(getString(R.string.Other));
         expenseList.add(otherObject);
 
-        try {
-            JSONObject arrayToPass = new JSONObject(String.valueOf(expenseList));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        savedBudget = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = savedBudget.edit();
+        Gson gson = new Gson();
+        String thingamabob = gson.toJson(expenseList);
+        preferencesEditor.putString("Da List", thingamabob);
+        preferencesEditor.commit();
     }
 
     public void buttonClick(View view){

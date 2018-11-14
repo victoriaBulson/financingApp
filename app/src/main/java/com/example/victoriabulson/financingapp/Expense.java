@@ -1,6 +1,8 @@
 package com.example.victoriabulson.financingapp;
 
-class Expense {
+import java.io.Serializable;
+
+class Expense implements Serializable {
 
     private String categoryName;
     private double budget;

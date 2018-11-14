@@ -48,11 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Expense otherObject = new Expense(getString(R.string.Other));
         expenseList.add(otherObject);
 
-        try {
-            JSONObject arrayToPass = new JSONObject(String.valueOf(expenseList));
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+        
 
     }
 

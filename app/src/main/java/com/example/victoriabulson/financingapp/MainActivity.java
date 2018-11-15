@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 
 import com.google.gson.Gson;
@@ -37,12 +38,18 @@ public class MainActivity extends AppCompatActivity {
         savedBudget = getPreferences(Context.MODE_PRIVATE);
         String json = savedBudget.getString("savedBudgetKey", null);
             //PRINTS PULLED STRING
-            final String TAG = "MAIN_ACTIVITY";
-            Log.d(TAG, "JSON IS: ");
-            Log.d(TAG, json);                   //Json always prints as null (11/14)
+         //final String TAG = "MAIN_ACTIVITY";
+         // Log.d(TAG, "JSON IS: ");
+         // Log.d(TAG, json);                   //Json always prints as null (11/14)
 
-        if (json != null) {                                                 //json never evaluates as null (11/14)
-            Log.d(TAG, "IF");
+        Toast printSavedMain = Toast.makeText(getApplicationContext(),
+              json,
+              Toast.LENGTH_LONG);
+
+        printSavedMain.show();
+
+        //if (json != null) {                                                 //json never evaluates as null (11/14)
+        //  Log.d(TAG, "IF");
             Expense rentObject = new Expense(getString(R.string.Rent));
             expenseList.add(rentObject);
             Expense transportObject = new Expense(getString(R.string.Transportation));
@@ -66,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
             Expense otherObject = new Expense(getString(R.string.Other));
             expenseList.add(otherObject);
 
-            savedBudget = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        }
-        else {
-            expenseList = gson.fromJson(json, List.class);
-            Log.d(TAG, "ELSE");
-        }
+        //  savedBudget = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        //}
+        //else {
+        //  expenseList = gson.fromJson(json, List.class);
+        //  Log.d(TAG, "ELSE");
+        //}
 
 
     }
@@ -86,10 +93,16 @@ public class MainActivity extends AppCompatActivity {
         preferencesEditor.putString("savedBudgetKey", expenseListString);
         preferencesEditor.commit();
         final String TAG = "MAIN_ACTIVITY";
-            //PRINTS SAVED STRING
-            String json = savedBudget.getString("savedBudgetKey", null);
-            Log.d(TAG, "THIS WAS SAVED: ");
-            Log.d(TAG, json);
+        //PRINTS SAVED STRING
+        String json = savedBudget.getString("savedBudgetKey", null);
+        //Log.d(TAG, "THIS WAS SAVED: ");
+        //Log.d(TAG, json);
+        Toast printSavedPause = Toast.makeText(getApplicationContext(),
+              json,
+              Toast.LENGTH_LONG);
+
+        printSavedPause.show();
+
 
 
     }

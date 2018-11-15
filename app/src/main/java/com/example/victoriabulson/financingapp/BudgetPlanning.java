@@ -1,9 +1,12 @@
 package com.example.victoriabulson.financingapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.google.gson.Gson;
 
 public class BudgetPlanning extends AppCompatActivity {
 
@@ -14,5 +17,6 @@ public class BudgetPlanning extends AppCompatActivity {
         }
     public void buttonClick(View view){
         Intent plannerIntent = new Intent(BudgetPlanning.this, MainActivity.class);
+
     }
 }

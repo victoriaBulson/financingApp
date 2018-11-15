@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     public SharedPreferences savedBudget;
     public String sharedPrefFile = "savedBudget";
     public List<Expense> expenseList = new ArrayList<>(11);
+    public String initialized;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +36,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Gson gson = new Gson();
+
         savedBudget = getPreferences(Context.MODE_PRIVATE);
         String json = savedBudget.getString("savedBudgetKey", null);
+        initialized = savedBudget.getString("initializedKey", null);
             //PRINTS PULLED STRING
-         //final String TAG = "MAIN_ACTIVITY";
-         // Log.d(TAG, "JSON IS: ");
-         // Log.d(TAG, json);                   //Json always prints as null (11/14)
+         final String TAG = "MAIN_ACTIVITY";
+          //Log.d(TAG, "JSON IS: ");
+          //Log.d(TAG, json);                   //Json always prints as null (11/14)
+        //Log.d(TAG, empty);
 
         Toast printSavedMain = Toast.makeText(getApplicationContext(),
               json,
@@ -48,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         printSavedMain.show();
 
-        //if (json != null) {                                                 //json never evaluates as null (11/14)
-        //  Log.d(TAG, "IF");
+        if (initialized == null) {                                                 //json never evaluates as null (11/14)
+          //Log.d(TAG, "IF");
+            Toast ifEntered = Toast.makeText(getApplicationContext(),
+                    json,
+                    Toast.LENGTH_LONG);
+            ifEntered.show();
             Expense rentObject = new Expense(getString(R.string.Rent));
             expenseList.add(rentObject);
             Expense transportObject = new Expense(getString(R.string.Transportation));
@@ -72,13 +80,17 @@ public class MainActivity extends AppCompatActivity {
             expenseList.add(debtObject);
             Expense otherObject = new Expense(getString(R.string.Other));
             expenseList.add(otherObject);
-
-        //  savedBudget = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        //}
-        //else {
-        //  expenseList = gson.fromJson(json, List.class);
-        //  Log.d(TAG, "ELSE");
-        //}
+          savedBudget = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+          initialized = "DONE!";
+        }
+        else {
+          expenseList = gson.fromJson(json, List.class);
+          //Log.d(TAG, "ELSE");
+            Toast ElseEntered = Toast.makeText(getApplicationContext(),
+                    "ELSE STATEMENT",
+                    Toast.LENGTH_LONG);
+            ElseEntered.show();
+        }
 
 
     }
@@ -91,17 +103,18 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
         String expenseListString = gson.toJson(expenseList);
         preferencesEditor.putString("savedBudgetKey", expenseListString);
+        preferencesEditor.putString("initializedKey", initialized);
         preferencesEditor.commit();
         final String TAG = "MAIN_ACTIVITY";
         //PRINTS SAVED STRING
-        String json = savedBudget.getString("savedBudgetKey", null);
-        //Log.d(TAG, "THIS WAS SAVED: ");
-        //Log.d(TAG, json);
-        Toast printSavedPause = Toast.makeText(getApplicationContext(),
+            String json = savedBudget.getString("savedBudgetKey", null);
+            //Log.d(TAG, "THIS WAS SAVED: ");
+            //Log.d(TAG, json);
+             Toast printSavedPause = Toast.makeText(getApplicationContext(),
               json,
               Toast.LENGTH_LONG);
 
-        printSavedPause.show();
+            printSavedPause.show();
 
 
 

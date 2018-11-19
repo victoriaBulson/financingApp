@@ -6,19 +6,148 @@
     android:layout_height="match_parent"
     tools:context=".BudgetPlanning">
 
+    <CheckBox
+        android:id="@+id/utilitiesCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/utilitiesTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/personalCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/personalCareTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/savingCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/savingsTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/otherCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/otherTxt2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/transportationCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/transportationTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/entertainCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/entertainmentTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/foodCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/foodTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rentCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rentTxt"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/debtCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/debtTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/emergencyCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/emergencyTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/healthCheckBoxA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:checked="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/healthCareTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/transportationMoney"
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,14 +156,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="156dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,14 +172,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="196dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -59,14 +188,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="236dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,14 +204,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="276dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,14 +220,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="316dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,14 +236,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="356dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,14 +252,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="396dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -139,14 +268,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="436dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -154,7 +283,7 @@
         android:id="@+id/dollarSignTxt7"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/healthCareTxt"
@@ -164,7 +293,7 @@
         android:id="@+id/dollarSignTxt8"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/emergencyTxt"
@@ -174,7 +303,7 @@
         android:id="@+id/dollarSignTxt9"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/savingsTxt"
@@ -184,7 +313,7 @@
         android:id="@+id/dollarSignTxt10"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/debtTxt"
@@ -194,7 +323,7 @@
         android:id="@+id/dollarSignTxt11"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/otherTxt2"
@@ -205,7 +334,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="88dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -213,7 +342,7 @@
         android:text="@string/Food"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -222,7 +351,7 @@
         android:layout_width="166dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -230,7 +359,7 @@
         android:text="@string/Rent"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -239,7 +368,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="128dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -247,7 +376,7 @@
         android:text="@string/Transportation"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -256,7 +385,7 @@
         android:layout_width="166dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="168dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -264,7 +393,7 @@
         android:text="@string/Utilities"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -273,7 +402,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -281,7 +410,7 @@
         android:text="@string/Entertainment"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -290,7 +419,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="248dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -298,7 +427,7 @@
         android:text="@string/PersonalCare"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -307,7 +436,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="288dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -315,7 +444,7 @@
         android:text="@string/HealthCare"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -324,7 +453,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="328dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -332,7 +461,7 @@
         android:text="@string/EmergencyFund"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -341,7 +470,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="368dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -349,7 +478,7 @@
         android:text="@string/Savings"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -358,7 +487,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="408dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -366,7 +495,7 @@
         android:text="@string/Debt"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -375,7 +504,7 @@
         android:layout_width="168dp"
         android:layout_height="41dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="448dp"
         android:layout_marginEnd="8dp"
         android:autofillHints=""
         android:ems="10"
@@ -383,7 +512,7 @@
         android:text="@string/Other"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -401,16 +530,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rentTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.21" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/budgetTxt"
         android:layout_width="82dp"
         android:layout_height="33dp"
-        android:layout_marginEnd="132dp"
+        android:layout_marginEnd="92dp"
         android:text="Budget"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -422,37 +551,19 @@
         android:id="@+id/fixedTxt"
         android:layout_width="53dp"
         android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginStart="324dp"
         android:text="Fixed"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/budgetTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/activeTxt"
-        android:layout_width="58dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Active"
-        android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/fixedTxt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/dollarSignTxt"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/rentTxt"
@@ -462,7 +573,7 @@
         android:id="@+id/dollarSignTxt2"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/foodTxt"
@@ -472,7 +583,7 @@
         android:id="@+id/dollarSignTxt3"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/transportationTxt"
@@ -482,7 +593,7 @@
         android:id="@+id/dollarSignTxt4"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/utilitiesTxt"
@@ -492,7 +603,7 @@
         android:id="@+id/dollarSignTxt5"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/entertainmentTxt"
@@ -502,7 +613,7 @@
         android:id="@+id/dollarSignTxt6"
         android:layout_width="28dp"
         android:layout_height="38dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="144dp"
         android:text="$"
         android:textSize="24sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/personalCareTxt"
@@ -513,14 +624,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -529,14 +640,14 @@
         android:layout_width="63dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:selectAllOnFocus="false"
         android:text="000.00"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.59"
+        app:layout_constraintHorizontal_bias="0.718"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -548,19 +659,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/rentMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/rentCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/rentMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -571,19 +670,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/foodMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/foodCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/foodMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -594,19 +681,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/transportationMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/transportationCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/transportationMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -617,19 +692,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/utilitesMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/utilitiesCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/utilitesMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -640,19 +703,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/entertainmentMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/entertainCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/entertainmentMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -663,19 +714,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/personalMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/personalCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/personalMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -686,19 +725,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/healthMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/healthCheckBoxA"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/healthMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -709,19 +736,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/emergencyMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/emergencyCheckBoxF2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/emergencyMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -732,19 +747,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/savingsMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/savingCheckBoxF2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/savingsMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -755,19 +758,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/debtMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/debtCheckBoxF2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/debtMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -778,19 +769,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/otherMoney"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <CheckBox
-        android:id="@+id/otherCheckBoxF2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:checked="true"
-        app:layout_constraintBaseline_toBaselineOf="@+id/otherMoney"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.976"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

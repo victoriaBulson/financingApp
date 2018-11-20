@@ -47,12 +47,12 @@ public class MainActivity extends AppCompatActivity {
         if (json == null) {                                                 //json never evaluates as null (11/14)
 
             createStorage();
-
+            Log.i("MAIN_ACT", "json == null");
             Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
         }
         else {
             expenseList = gson.fromJson(json, List.class);
-
+            Log.i("MAIN", "json != null");
             Toast.makeText(this,"Found old Array",Toast.LENGTH_SHORT).show();
         }
 

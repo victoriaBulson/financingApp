@@ -96,6 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:checked="true"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBaseline_toBaselineOf="@+id/rentTxt"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -530,7 +531,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/rentTxt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
+        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
@@ -780,7 +781,7 @@
         android:layout_marginEnd="8dp"
         android:onClick="buttonClick"
         android:text="@string/Submit"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

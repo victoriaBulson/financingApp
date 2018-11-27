@@ -3,6 +3,7 @@ package com.example.victoriabulson.financingapp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
 
 
-        savedBudget = getPreferences(Context.MODE_PRIVATE);
+        savedBudget = PreferenceManager.getDefaultSharedPreferences(this);
 
         String json = savedBudget.getString("savedBudgetKey", null);
 
@@ -44,8 +45,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             expenseList = gson.fromJson(json, List.class);
             Log.i("MAIN", "json != null");
-            Toast.makeText(this,"Found old Array",Toast.LENGTH_SHORT).show();
-        }
+    }
 
 
     }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
 
 
-        savedBudget = getPreferences(MODE_PRIVATE);
+        //savedBudget = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();
 
         Gson gson = new Gson();

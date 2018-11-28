@@ -1,5 +1,8 @@
 package com.example.victoriabulson.financingapp;
 
+/**
+ * Setters and getters for the categories, locations, description for each expense
+ */
 class Transaction {
 
     private double price;

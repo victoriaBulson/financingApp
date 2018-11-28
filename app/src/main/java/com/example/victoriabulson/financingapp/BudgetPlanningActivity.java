@@ -1,13 +1,11 @@
 package com.example.victoriabulson.financingapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -15,14 +13,19 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.preference.PreferenceManager.getDefaultSharedPreferences;
-
+/**
+ * @authors Victoria, Bradlee, Christoph, Stephen
+ * Allows input of budget and categories
+ */
 public class BudgetPlanningActivity extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
     public List<Expense> expenseList = new ArrayList<>(11);
 
     @Override
+    /**
+     * Pulls the array from the activity and displays it to the screen for editing
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_planning);
@@ -33,6 +36,10 @@ public class BudgetPlanningActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Saves changes made to the activity
+     * @param view
+     */
     public void buttonClick(View view) {
         Intent plannerIntent = new Intent(BudgetPlanningActivity.this, MainActivity.class);
 

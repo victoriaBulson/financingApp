@@ -2,6 +2,9 @@ package com.example.victoriabulson.financingapp;
 
 import java.io.Serializable;
 
+/**
+ * Categorization tool for expenses
+ */
 class Expense implements Serializable {
 
     private String categoryName;

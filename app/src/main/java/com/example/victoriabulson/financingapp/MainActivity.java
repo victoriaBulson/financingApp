@@ -3,9 +3,6 @@ package com.example.victoriabulson.financingapp;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.nfc.Tag;
-import android.os.Parcelable;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,12 +12,6 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
         if (json == null) {                                                 //json never evaluates as null (11/14)
 
             createStorage();
-
+            Log.i("MAIN_ACT", "json == null");
             Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
         }
         else {
             expenseList = gson.fromJson(json, List.class);
-
+            Log.i("MAIN", "json != null");
             Toast.makeText(this,"Found old Array",Toast.LENGTH_SHORT).show();
         }
 
@@ -78,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonClick(View view) {
-        Intent plannerIntent = new Intent(MainActivity.this, BudgetPlanning.class);
+        Intent plannerIntent = new Intent(MainActivity.this, BudgetPlanningActivity.class);
         startActivity(plannerIntent);
     }
 

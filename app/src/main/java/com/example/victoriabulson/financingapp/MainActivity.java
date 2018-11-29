@@ -1,15 +1,13 @@
 package com.example.victoriabulson.financingapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -25,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     public Expense thing;
 
     @Override
+    /**
+     * Generates the array if nonexistent and pulls it if it does exist
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -57,6 +58,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    /**
+     * Saves the array when the app is closed
+     */
     protected void onPause() {
         super.onPause();
 
@@ -77,11 +81,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Opens the budget planning activity for the viewer to see
+     * @param view
+     */
     public void buttonClick(View view) {
         Intent plannerIntent = new Intent(MainActivity.this, BudgetPlanningActivity.class);
         startActivity(plannerIntent);
     }
 
+    /**
+     * Creates the storage to hold the variables
+     */
     private void createStorage(){
 
 

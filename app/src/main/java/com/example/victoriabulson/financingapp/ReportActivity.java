@@ -30,7 +30,7 @@ public class ReportActivity extends AppCompatActivity {
         String json = savedBudget.getString("savedBudgetKey", null);
         Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
         expenseList = gson.fromJson(json, type);
-
-
     }
+
+    
 }

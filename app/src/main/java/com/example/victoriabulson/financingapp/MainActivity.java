@@ -10,15 +10,17 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
-    public List<Expense> expenseList = new ArrayList<>(11);
-
+    public List<Expense> expenseList = new ArrayList<Expense>(11);
+    public Expense thing;
 
     @Override
     /**
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
 
 
-        savedBudget = PreferenceManager.getDefaultSharedPreferences(this);
+        savedBudget = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
 
         String json = savedBudget.getString("savedBudgetKey", null);
 
@@ -44,9 +46,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
         }
         else {
-            expenseList = gson.fromJson(json, List.class);
+            Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
+            expenseList = gson.fromJson(json, type);
             Log.i("MAIN", "json != null");
-    }
+        }
+
+
+
 
 
     }
@@ -58,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-
         //savedBudget = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();
 
@@ -69,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
         //PRINTS SAVED STRING
         String json = savedBudget.getString("savedBudgetKey", null);
+        //Expense zero = expenseList.get(0);
+        //double zeroMoney = zero.getBudget();
+
+        //Log.d("onPause", String.valueOf(testBudg));
 
     }
 
@@ -85,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
      * Creates the storage to hold the variables
      */
     private void createStorage(){
+
+
+        thing = new Expense("thing");
+
 
         Expense rentObject = new Expense(getString(R.string.Rent));
         expenseList.add(rentObject);
@@ -108,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
         expenseList.add(debtObject);
         Expense otherObject = new Expense(getString(R.string.Other));
         expenseList.add(otherObject);
+
+        expenseList.get(0);
 
     }
 

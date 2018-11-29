@@ -1,45 +1,43 @@
 package com.example.victoriabulson.financingapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @authors Victoria, Bradlee, Christoph, Stephen
- * Allows input of budget and categories
- */
+import static android.preference.PreferenceManager.getDefaultSharedPreferences;
+
 public class BudgetPlanningActivity extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
     public List<Expense> expenseList = new ArrayList<>(11);
 
     @Override
-    /**
-     * Pulls the array from the activity and displays it to the screen for editing
-     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_planning);
         Gson gson = new Gson();
         savedBudget  = PreferenceManager.getDefaultSharedPreferences(this);
         String json = savedBudget.getString("savedBudgetKey", null);
-        expenseList = gson.fromJson(json, List.class);
+        Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
+        expenseList = gson.fromJson(json, type);
 
     }
 
-    /**
-     * Saves changes made to the activity
-     * @param view
-     */
+
     public void buttonClick(View view) {
         Intent plannerIntent = new Intent(BudgetPlanningActivity.this, MainActivity.class);
 
@@ -47,19 +45,31 @@ public class BudgetPlanningActivity extends AppCompatActivity {
 
     public void buttonSave(View view) {
 
-        /*expenseList.get(0).setBudget(Double.parseDouble(toString(getText(R.id.rentMoney))));
-        expenseList.get(1).setBudget(R.id.foodMoney);
-        expenseList.get(2).setBudget(R.id.transportationMoney);
-        expenseList.get(3).setBudget(R.id.utilitesMoney);
-        expenseList.get(4).setBudget(R.id.entertainmentMoney);
-        expenseList.get(5).setBudget(R.id.personalMoney);
-        expenseList.get(6).setBudget(R.id.healthMoney);
-        expenseList.get(7).setBudget(R.id.emergencyMoney);
-        expenseList.get(8).setBudget(R.id.savingsMoney);
-        expenseList.get(9).setBudget(R.id.debtMoney);
-        expenseList.get(10).setBudget(R.id.otherMoney);
+        EditText editValue = (EditText) findViewById(R.id.rentMoney);
+        expenseList.get(0).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.foodMoney);
+        expenseList.get(1).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.transportationMoney);
+        expenseList.get(2).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.utilitesMoney);
+        expenseList.get(3).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.entertainmentMoney);
+        expenseList.get(4).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.personalMoney);
+        expenseList.get(5).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.healthMoney);
+        expenseList.get(6).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.emergencyMoney);
+        expenseList.get(7).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.savingsMoney);
+        expenseList.get(8).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.debtMoney);
+        expenseList.get(9).setBudget(Double.parseDouble(editValue.getText().toString()));
+        editValue = (EditText) findViewById(R.id.otherMoney);
+        expenseList.get(10).setBudget(Double.parseDouble(editValue.getText().toString()));
 
-        CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
+
+        /*CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(0).setFixed(true);
         } else {

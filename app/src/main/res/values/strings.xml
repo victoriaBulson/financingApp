@@ -24,4 +24,6 @@
     <string name="budgetBar">Spent/Budget</string>
     <string name="detailed_report">Detailed Report</string>
     <string name="Rent">Rent</string>
+    <string name="Exit">Exit</string>
+    <string name="Close">Close</string>
 </resources>

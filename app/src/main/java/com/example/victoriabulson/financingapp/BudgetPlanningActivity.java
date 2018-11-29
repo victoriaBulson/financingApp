@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -46,28 +47,83 @@ public class BudgetPlanningActivity extends AppCompatActivity {
     public void buttonSave(View view) {
 
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
-        expenseList.get(0).setBudget(Double.parseDouble(editValue.getText().toString()));
+        Log.d("onSaved", editValue.getText().toString());
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(0).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(0).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.foodMoney);
-        expenseList.get(1).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(1).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(1).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.transportationMoney);
-        expenseList.get(2).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(2).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(2).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.utilitesMoney);
-        expenseList.get(3).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(3).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(3).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.entertainmentMoney);
-        expenseList.get(4).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(4).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(4).setBudget(0);
+        };
         editValue = (EditText) findViewById(R.id.personalMoney);
-        expenseList.get(5).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(5).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(5).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.healthMoney);
-        expenseList.get(6).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(6).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(6).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.emergencyMoney);
-        expenseList.get(7).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(7).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(7).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.savingsMoney);
-        expenseList.get(8).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(8).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(8).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.debtMoney);
-        expenseList.get(9).setBudget(Double.parseDouble(editValue.getText().toString()));
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(9).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(9).setBudget(0);
+        }
         editValue = (EditText) findViewById(R.id.otherMoney);
-        expenseList.get(10).setBudget(Double.parseDouble(editValue.getText().toString()));
-
+        if(editValue.getText().toString().trim().length() > 0) {
+            expenseList.get(10).setBudget(Double.parseDouble(editValue.getText().toString()));
+        }
+        else{
+            expenseList.get(10).setBudget(0);
+        }
 
         /*CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         if (checkBox.isChecked()) {

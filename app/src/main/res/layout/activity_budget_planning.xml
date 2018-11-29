@@ -795,6 +795,7 @@
         android:ems="10"
         android:inputType="number"
         tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="525dp" />
+        tools:layout_editor_absoluteY="525dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

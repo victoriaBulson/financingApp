@@ -16,10 +16,12 @@
     <string name="Savings">Savings</string>
     <string name="Other">Other</string>
     <string name="Debt">Debt</string>
-    <string name="Rent">Rent</string>
     <string name="Submit">Submit</string>
     <string name="reportTitle">Detailed Report</string>
     <string name="reportFiller">Spent: 999.50 Out of: 2000.00</string>
     <string name="Spent">Spent $</string>
     <string name="Budgeted">Budgeted $</string>
+    <string name="budgetBar">Spent/Budget</string>
+    <string name="detailed_report">Detailed Report</string>
+    <string name="Rent">Rent</string>
 </resources>

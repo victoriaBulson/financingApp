@@ -8,16 +8,410 @@
 
     <TextView
         android:id="@+id/reportTitle"
-        android:layout_width="wrap_content"
+        android:layout_width="333dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="detialReport"
-        android:textSize="24sp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/detailed_report"
+        android:textAlignment="center"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ScrollView
+        android:layout_width="371dp"
+        android:layout_height="505dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="245dp">
+
+            <LinearLayout
+                android:id="@+id/rentLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="43dp">
+
+                <TextView
+                    android:id="@+id/rentTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Rent"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="127dp" />
+
+                <ProgressBar
+                    android:id="@+id/rentProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/rentSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/foodLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="127dp">
+
+                <TextView
+                    android:id="@+id/foodTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Food"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="163dp" />
+
+                <ProgressBar
+                    android:id="@+id/foodProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/foodSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transportLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="222dp">
+
+                <TextView
+                    android:id="@+id/transportTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Transportation"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="199dp" />
+
+                <ProgressBar
+                    android:id="@+id/transportProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/transportSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/utilitiesLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="324dp">
+
+                <TextView
+                    android:id="@+id/utilitiesTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Utilities"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="235dp" />
+
+                <ProgressBar
+                    android:id="@+id/utilitiesProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/utilitiesSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/entertainmentLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="389dp">
+
+                <TextView
+                    android:id="@+id/entertainmentTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Entertainment"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="271dp" />
+
+                <ProgressBar
+                    android:id="@+id/entertainmentProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/entertainmentSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personalLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="488dp">
+
+                <TextView
+                    android:id="@+id/personalTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/PersonalCare"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="307dp" />
+
+                <ProgressBar
+                    android:id="@+id/personalProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/personalSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/healthLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="559dp">
+
+                <TextView
+                    android:id="@+id/healthCareTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/HealthCare"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="343dp" />
+
+                <ProgressBar
+                    android:id="@+id/healthProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/healthSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emergencyLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="436dp">
+
+                <TextView
+                    android:id="@+id/emergencyTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/EmergencyFund"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="379dp" />
+
+                <ProgressBar
+                    android:id="@+id/emergencyProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/emergencySpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/savingLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="340dp">
+
+                <TextView
+                    android:id="@+id/savingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Savings"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="415dp" />
+
+                <ProgressBar
+                    android:id="@+id/savingProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/savingSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/debtLayout"
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="436dp">
+
+                <TextView
+                    android:id="@+id/debtTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Debt"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="451dp" />
+
+                <ProgressBar
+                    android:id="@+id/debtProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/debtSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="96dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="340dp">
+
+                <TextView
+                    android:id="@+id/otherTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="@string/Other"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="223dp"
+                    tools:layout_editor_absoluteY="406dp" />
+
+                <ProgressBar
+                    android:id="@+id/otherProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:id="@+id/otherSpent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reportFiller"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
 
 </android.support.constraint.ConstraintLayout>
+
+
+
+

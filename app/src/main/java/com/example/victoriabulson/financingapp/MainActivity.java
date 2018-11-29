@@ -111,4 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void buttonClickReport(View view) {
+        Intent plannerIntent = new Intent(MainActivity.this, ReportActivity.class);
+        startActivity(plannerIntent);
+    }
+
 }

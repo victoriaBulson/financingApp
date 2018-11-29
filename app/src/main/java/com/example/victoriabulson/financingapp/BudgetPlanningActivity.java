@@ -40,12 +40,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
 
     }
 
-    public void buttonClickClose(View view) {
-        Intent plannerIntent = new Intent(BudgetPlanningActivity.this, MainActivity.class);
-        startActivity(plannerIntent);
-    }
-
-    public void buttonSave(View view) {
+     public void buttonSave(View view) {
 
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
         Log.d("onSaved", editValue.getText().toString());

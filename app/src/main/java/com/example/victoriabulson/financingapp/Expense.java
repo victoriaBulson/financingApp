@@ -31,11 +31,11 @@ class Expense implements Serializable {
     }
 
 
-    private void setUsed(boolean isUsed) {
+    public void setUsed(boolean isUsed) {
         beingUsed = isUsed;
     }
 
-    private boolean getUsed() {
+    public boolean getUsed() {
         return beingUsed;
     }
 

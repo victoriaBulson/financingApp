@@ -35,7 +35,10 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         String json = savedBudget.getString("savedBudgetKey", null);
         Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
         expenseList = gson.fromJson(json, type);
+        Log.i("MAIN", "json != null");
 
+        //EditText editValue = (EditText) findViewById(R.id.rentMoney);
+       //editValue.setText(Double.toString(expenseList.get(0).getBudget()));
     }
 
 
@@ -124,14 +127,13 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         else{
             expenseList.get(10).setBudget(0);
         }
-
-        /*CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
+        // If fixed amount checkbox
+        CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(0).setFixed(true);
         } else {
             expenseList.get(0).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(1).setFixed(true);
@@ -201,88 +203,90 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         } else {
             expenseList.get(10).setFixed(false);
         }
+        // If in used checkboxs
         checkBox = (CheckBox) findViewById(R.id.rentCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(0).setFixed(true);
+            expenseList.get(0).setUsed(true);
         } else {
-            expenseList.get(0).setFixed(false);
+            expenseList.get(0).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.foodCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(1).setFixed(true);
+            expenseList.get(1).setUsed(true);
         } else {
-            expenseList.get(1).setFixed(false);
+            expenseList.get(1).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(2).setFixed(true);
+            expenseList.get(2).setUsed(true);
         } else {
-            expenseList.get(2).setFixed(false);
+            expenseList.get(2).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(3).setFixed(true);
+            expenseList.get(3).setUsed(true);
         } else {
-            expenseList.get(3).setFixed(false);
+            expenseList.get(3).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(4).setFixed(true);
+            expenseList.get(4).setUsed(true);
         } else {
-            expenseList.get(4).setFixed(false);
+            expenseList.get(4).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.personalCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(5).setFixed(true);
+            expenseList.get(5).setUsed(true);
         } else {
-            expenseList.get(5).setFixed(false);
+            expenseList.get(5).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.healthCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(6).setFixed(true);
+            expenseList.get(6).setUsed(true);
         } else {
-            expenseList.get(6).setFixed(false);
+            expenseList.get(6).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(7).setFixed(true);
+            expenseList.get(7).setUsed(true);
         } else {
-            expenseList.get(7).setFixed(false);
+            expenseList.get(7).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.savingCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(8).setFixed(true);
+            expenseList.get(8).setUsed(true);
         } else {
-            expenseList.get(8).setFixed(false);
+            expenseList.get(8).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.debtCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(9).setFixed(true);
+            expenseList.get(9).setUsed(true);
         } else {
-            expenseList.get(9).setFixed(false);
+            expenseList.get(9).setUsed(false);
         }
 
         checkBox = (CheckBox) findViewById(R.id.otherCheckBoxA);
         if (checkBox.isChecked()) {
-            expenseList.get(10).setFixed(true);
+            expenseList.get(10).setUsed(true);
         } else {
-            expenseList.get(10).setFixed(false);
-        }*/
+            expenseList.get(10).setUsed(false);
+        }
+
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();
 
         Gson gson = new Gson();
         String expenseListString = gson.toJson(expenseList);
         preferencesEditor.putString("savedBudgetKey", expenseListString);
-        preferencesEditor.commit();
+        preferencesEditor.apply();
         Toast.makeText(this, expenseListString,Toast.LENGTH_SHORT).show();
 
         BudgetPlanningActivity.this.finish();

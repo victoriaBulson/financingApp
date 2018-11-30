@@ -81,6 +81,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume(){
+        super.onResume();
+
+        Gson gson = new Gson();
+
+
+        savedBudget = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+
+        String json = savedBudget.getString("savedBudgetKey", null);
+        Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
+        expenseList = gson.fromJson(json, type);
+        Log.i("MAIN", "json != null");
+
+    }
+
     /**
      * Opens the budget planning activity for the viewer to see
      * @param view
@@ -132,4 +148,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(plannerIntent);
     }
 
+    public void buttonAddExpense(View view) {
+        Intent plannerIntent = new Intent(MainActivity.this, AddExpenseActivity.class);
+        startActivity(plannerIntent);
+    }
 }

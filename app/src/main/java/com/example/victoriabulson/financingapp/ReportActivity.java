@@ -1,9 +1,11 @@
 package com.example.victoriabulson.financingapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,5 +34,10 @@ public class ReportActivity extends AppCompatActivity {
         expenseList = gson.fromJson(json, type);
     }
 
-    
+    public void buttonClickClose(View view) {
+        Intent plannerIntent = new Intent(ReportActivity.this, MainActivity.class);
+        startActivity(plannerIntent);
+    }
+
+
 }

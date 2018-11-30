@@ -1,6 +1,5 @@
 package com.example.victoriabulson.financingapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,7 +7,6 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,8 +16,6 @@ import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import static android.preference.PreferenceManager.getDefaultSharedPreferences;
 
 public class BudgetPlanningActivity extends AppCompatActivity {
 
@@ -47,7 +43,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
 
     }
 
-    public void buttonSave(View view) {
+     public void buttonSave(View view) {
 
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
         Log.d("onSaved", editValue.getText().toString());

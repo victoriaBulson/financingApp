@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
@@ -94,6 +95,22 @@ public class MainActivity extends AppCompatActivity {
         Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
         expenseList = gson.fromJson(json, type);
         Log.i("MAIN", "json != null");
+        double totalbudget = 0;
+        TextView tv = (TextView)findViewById(R.id.budgetDisplay);
+        for (int i = 0; i <11; i++){
+            double budget = expenseList.get(i).getBudget();
+            double old = totalbudget;
+            totalbudget = old + budget;
+        }
+        tv.setText(Double.toString(totalbudget));
+        double totalSpent = 0;
+        TextView ts = (TextView)findViewById(R.id.spentDisplay);
+        for (int i = 0; i <11; i++){
+            double budget = expenseList.get(i).getSpent();
+            double old = totalSpent;
+            totalSpent = old + budget;
+        }
+        ts.setText(Double.toString(totalSpent));
 
     }
 

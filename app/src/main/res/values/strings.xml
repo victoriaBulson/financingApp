@@ -26,4 +26,17 @@
     <string name="Rent">Rent</string>
     <string name="Exit">Exit</string>
     <string name="Close">Close</string>
+    <string-array name="catagoryNameArray">
+        <item>Rent</item>
+        <item>Transport</item>
+        <item>Food and Groceries</item>
+        <item>Utilities</item>
+        <item>Entertainment</item>
+        <item>Saving</item>
+        <item>Emergency Fund</item>
+        <item>Personal Care</item>
+        <item>Health Care</item>
+        <item>Debt</item>
+        <item>Other</item>
+    </string-array>
 </resources>

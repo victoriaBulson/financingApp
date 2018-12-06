@@ -32,31 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Gson gson = new Gson();
-
-
-        savedBudget = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
-
-        String json = savedBudget.getString("savedBudgetKey", null);
-
-        //PRINTS PULLED STRING
-
-        if (json == null) {                                                 //json never evaluates as null (11/14)
-
-            createStorage();
-            Log.i("MAIN_ACT", "json == null");
-            Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
-        }
-        else {
-            Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
-            expenseList = gson.fromJson(json, type);
-            Log.i("MAIN", "json != null");
-        }
-
-
-
-
-
     }
 
     @Override
@@ -100,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
             createStorage();
             Log.i("MAIN_ACT", "json == null");
-            Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
         }
         else {
             Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
@@ -128,9 +103,6 @@ public class MainActivity extends AppCompatActivity {
         ts.setText(Double.toString(totalSpent));
 
         Double spentProgress = (totalSpent/totalbudget) * 100;
-        Log.d("MAIN", Double.toString(totalSpent));
-        Log.d("MAIN", Double.toString(totalbudget));
-        Log.d("MAIN", Double.toString(spentProgress));
         ProgressBar spentProgressDisplay = findViewById(R.id.budgProgBar);
         spentProgressDisplay.setProgress(spentProgress.intValue());
 
@@ -191,4 +163,18 @@ public class MainActivity extends AppCompatActivity {
         Intent plannerIntent = new Intent(MainActivity.this, AddExpenseActivity.class);
         startActivity(plannerIntent);
     }
+
+    public void buttonResetSpent(View view) {
+        for(int i = 0; i < 11; i++){
+            expenseList.get(i).setSpent(0);
+        }
+
+        TextView ts = (TextView)findViewById(R.id.spentDisplay);
+        ts.setText("0.00");
+        ProgressBar spentProgressDisplay = findViewById(R.id.budgProgBar);
+        int zero = 0;
+        spentProgressDisplay.setProgress(zero);
+        }
+
+
 }

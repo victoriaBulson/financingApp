@@ -40,21 +40,18 @@ public class ReportActivity extends AppCompatActivity {
         TextView rentView = findViewById(R.id.rentSpent);
         rentView.setText("Spent: $" + expenseList.get(0).getSpent() + " Budget: $" + expenseList.get(0).getBudget());
         ProgressBar rentBar = findViewById(R.id.rentProgressBar);
-        rentBar.setMax((int) expenseList.get(0).getBudget());
         rentBar.setProgress(percentBudget(0));
 
         //FOOD
         TextView foodView = findViewById(R.id.foodSpent);
         foodView.setText("Spent: $" + expenseList.get(1).getSpent() + " Budget: $" + expenseList.get(1).getBudget());
         ProgressBar foodBar = findViewById(R.id.foodProgressBar);
-        foodBar.setMax((int) expenseList.get(1).getBudget());
         foodBar.setProgress(percentBudget(1));
 
         //TRANSPORTATION
         TextView transportView = findViewById(R.id.transportSpent);
         transportView.setText("Spent: $" + expenseList.get(2).getSpent() + " Budget: $" + expenseList.get(2).getBudget());
         ProgressBar transportBar = findViewById(R.id.transportProgressBar);
-        transportBar.setMax((int) expenseList.get(2).getBudget());
         transportBar.setProgress(percentBudget(2));
 
         //UTILITIES

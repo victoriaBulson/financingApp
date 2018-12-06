@@ -92,15 +92,29 @@ public class MainActivity extends AppCompatActivity {
         savedBudget = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
 
         String json = savedBudget.getString("savedBudgetKey", null);
-        Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
-        expenseList = gson.fromJson(json, type);
+
+        //PRINTS PULLED STRING
+
+        if (json == null) {                                                 //json never evaluates as null (11/14)
+
+            createStorage();
+            Log.i("MAIN_ACT", "json == null");
+            Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
+            expenseList = gson.fromJson(json, type);
+            Log.i("MAIN", "json != null");
+        }
+
+        //expenseList = gson.fromJson(json, type);
         Log.i("MAIN", "json != null");
         double totalbudget = 0;
         TextView tv = (TextView)findViewById(R.id.budgetDisplay);
         for (int i = 0; i <11; i++){
-            double budget = expenseList.get(i).getBudget();
-            double old = totalbudget;
-            totalbudget = old + budget;
+          double budget = expenseList.get(i).getBudget();
+          double old = totalbudget;
+          totalbudget = old + budget;
         }
         tv.setText(Double.toString(totalbudget));
         double totalSpent = 0;

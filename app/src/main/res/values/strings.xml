@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">financingApp</string>
-    <string name="spentLabelTxt">You\'ve Spent:</string>
-    <string name="budgetLabelTxt">Your Budget:</string>
+    <string name="spentLabelTxt">You\'ve Spent: $</string>
+    <string name="budgetLabelTxt">Your Budget: $</string>
     <string name="addExpenseButtonTxt">Add Expense</string>
     <string name="updateButtonTxt">Update</string>
     <string name="reportButtonTxt">Detailed Report</string>

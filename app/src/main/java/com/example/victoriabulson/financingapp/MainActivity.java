@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -125,6 +126,13 @@ public class MainActivity extends AppCompatActivity {
             totalSpent = old + budget;
         }
         ts.setText(Double.toString(totalSpent));
+
+        Double spentProgress = (totalSpent/totalbudget) * 100;
+        Log.d("MAIN", Double.toString(totalSpent));
+        Log.d("MAIN", Double.toString(totalbudget));
+        Log.d("MAIN", Double.toString(spentProgress));
+        ProgressBar spentProgressDisplay = findViewById(R.id.budgProgBar);
+        spentProgressDisplay.setProgress(spentProgress.intValue());
 
     }
 

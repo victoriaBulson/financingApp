@@ -109,7 +109,7 @@ public class ReportActivity extends AppCompatActivity {
     }
 
     public int percentBudget(int aval){
-        return (int) ((expenseList.get(aval).getSpent() / 100) * expenseList.get(aval).getBudget());
+        return (int) ((expenseList.get(aval).getSpent() / expenseList.get(aval).getBudget())*100);
     }
 
 

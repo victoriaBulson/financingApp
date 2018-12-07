@@ -34,8 +34,74 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         expenseList = gson.fromJson(json, type);
         Log.i("MAIN", "json != null");
 
-        //EditText editValue = (EditText) findViewById(R.id.rentMoney);
-       //editValue.setText(Double.toString(expenseList.get(0).getBudget()));
+        EditText editValue = (EditText) findViewById(R.id.rentMoney);
+        editValue.setText(Double.toString(expenseList.get(0).getBudget()));
+        editValue = (EditText) findViewById(R.id.foodMoney);
+        editValue.setText(Double.toString(expenseList.get(1).getBudget()));
+        editValue = (EditText) findViewById(R.id.transportationMoney);
+        editValue.setText(Double.toString(expenseList.get(2).getBudget()));
+        editValue = (EditText) findViewById(R.id.utilitesMoney);
+        editValue.setText(Double.toString(expenseList.get(3).getBudget()));
+        editValue = (EditText) findViewById(R.id.entertainmentMoney);
+        editValue.setText(Double.toString(expenseList.get(4).getBudget()));
+        editValue = (EditText) findViewById(R.id.personalMoney);
+        editValue.setText(Double.toString(expenseList.get(5).getBudget()));
+        editValue = (EditText) findViewById(R.id.healthMoney);
+        editValue.setText(Double.toString(expenseList.get(6).getBudget()));
+        editValue = (EditText) findViewById(R.id.emergencyMoney);
+        editValue.setText(Double.toString(expenseList.get(7).getBudget()));
+        editValue = (EditText) findViewById(R.id.savingsMoney);
+        editValue.setText(Double.toString(expenseList.get(8).getBudget()));
+        editValue = (EditText) findViewById(R.id.debtMoney);
+        editValue.setText(Double.toString(expenseList.get(9).getBudget()));
+        editValue = (EditText) findViewById(R.id.otherMoney);
+        editValue.setText(Double.toString(expenseList.get(10).getBudget()));
+
+        CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
+        checkBox.setChecked(expenseList.get(0).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);
+        checkBox.setChecked(expenseList.get(1).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxF);
+        checkBox.setChecked(expenseList.get(2).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxF);
+        checkBox.setChecked(expenseList.get(3).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxF);
+        checkBox.setChecked(expenseList.get(4).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxF);
+        checkBox.setChecked(expenseList.get(5).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxF);
+        checkBox.setChecked(expenseList.get(6).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxF);
+        checkBox.setChecked(expenseList.get(7).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxF);
+        checkBox.setChecked(expenseList.get(8).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxF);
+        checkBox.setChecked(expenseList.get(9).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxF);
+        checkBox.setChecked(expenseList.get(10).getFixed());
+        // If in used checkboxs
+        checkBox = (CheckBox) findViewById(R.id.rentCheckBoxA);
+        checkBox.setChecked(expenseList.get(0).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxA);
+        checkBox.setChecked(expenseList.get(1).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxA);
+        checkBox.setChecked(expenseList.get(2).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxA);
+        checkBox.setChecked(expenseList.get(3).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxA);
+        checkBox.setChecked(expenseList.get(4).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxA);
+        checkBox.setChecked(expenseList.get(5).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxA);
+        checkBox.setChecked(expenseList.get(6).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxA);
+        checkBox.setChecked(expenseList.get(7).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxA);
+        checkBox.setChecked(expenseList.get(8).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxA);
+        checkBox.setChecked(expenseList.get(9).getUsed());
+        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxA);
+        checkBox.setChecked(expenseList.get(10).getUsed());
     }
 
 

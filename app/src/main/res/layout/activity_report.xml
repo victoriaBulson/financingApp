@@ -63,14 +63,11 @@
                 tools:layout_editor_absoluteX="10dp"
                 tools:layout_editor_absoluteY="43dp">
 
-                <TextView
-                    android:id="@+id/rentTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Rent"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="127dp" />
+                <Button
+                    android:id="@+id/showRentBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rent" />
 
                 <ProgressBar
                     android:id="@+id/rentProgressBar"
@@ -96,14 +93,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="127dp">
 
-                <TextView
-                    android:id="@+id/foodTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Food"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="163dp" />
+                <Button
+                    android:id="@+id/showFoodBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Food" />
 
                 <ProgressBar
                     android:id="@+id/foodProgressBar"
@@ -129,14 +123,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="222dp">
 
-                <TextView
-                    android:id="@+id/transportTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Transportation"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="199dp" />
+                <Button
+                    android:id="@+id/showTransportBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Transportation" />
 
                 <ProgressBar
                     android:id="@+id/transportProgressBar"
@@ -162,14 +153,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="324dp">
 
-                <TextView
-                    android:id="@+id/utilitiesTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Utilities"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="235dp" />
+                <Button
+                    android:id="@+id/showUtilitiesBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Utilities" />
 
                 <ProgressBar
                     android:id="@+id/utilitiesProgressBar"
@@ -195,14 +183,11 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="389dp">
 
-                <TextView
-                    android:id="@+id/entertainmentTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Entertainment"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="271dp" />
+                <Button
+                    android:id="@+id/showEntertainmentBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Entertainment" />
 
                 <ProgressBar
                     android:id="@+id/entertainmentProgressBar"
@@ -228,14 +213,11 @@
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="488dp">
 
-                <TextView
-                    android:id="@+id/personalTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/PersonalCare"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="307dp" />
+                <Button
+                    android:id="@+id/showPersonalBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PersonalCare" />
 
                 <ProgressBar
                     android:id="@+id/personalProgressBar"
@@ -261,14 +243,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="559dp">
 
-                <TextView
-                    android:id="@+id/healthCareTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/HealthCare"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="343dp" />
+                <Button
+                    android:id="@+id/showHealthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/HealthCare" />
 
                 <ProgressBar
                     android:id="@+id/healthProgressBar"
@@ -294,14 +273,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="436dp">
 
-                <TextView
-                    android:id="@+id/emergencyTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/EmergencyFund"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="379dp" />
+                <Button
+                    android:id="@+id/showEmergencyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EmergencyFund" />
 
                 <ProgressBar
                     android:id="@+id/emergencyProgressBar"
@@ -327,14 +303,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="340dp">
 
-                <TextView
-                    android:id="@+id/savingTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Savings"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="415dp" />
+                <Button
+                    android:id="@+id/showSavingsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Savings" />
 
                 <ProgressBar
                     android:id="@+id/savingProgressBar"
@@ -360,14 +333,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="436dp">
 
-                <TextView
-                    android:id="@+id/debtTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Debt"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="451dp" />
+                <Button
+                    android:id="@+id/showDebtBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Debt" />
 
                 <ProgressBar
                     android:id="@+id/debtProgressBar"
@@ -392,14 +362,11 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="340dp">
 
-                <TextView
-                    android:id="@+id/otherTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:text="@string/Other"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="223dp"
-                    tools:layout_editor_absoluteY="406dp" />
+                <Button
+                    android:id="@+id/showOtherBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Other" />
 
                 <ProgressBar
                     android:id="@+id/otherProgressBar"

@@ -63,14 +63,15 @@
                 tools:layout_editor_absoluteX="10dp"
                 tools:layout_editor_absoluteY="43dp">
 
-                <TextView
-                    android:id="@+id/rentTxt"
+                <Button
+                    android:id="@+id/rentBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Rent"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="127dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/rentProgressBar"
@@ -96,14 +97,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="127dp">
 
-                <TextView
-                    android:id="@+id/foodTxt"
+                <Button
+                    android:id="@+id/foodBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Food"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="163dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/foodProgressBar"
@@ -129,14 +131,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="222dp">
 
-                <TextView
-                    android:id="@+id/transportTxt"
+                <Button
+                    android:id="@+id/transportBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Transportation"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="199dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/transportProgressBar"
@@ -162,14 +165,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="324dp">
 
-                <TextView
-                    android:id="@+id/utilitiesTxt"
+                <Button
+                    android:id="@+id/utilitiesBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Utilities"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="235dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/utilitiesProgressBar"
@@ -195,14 +199,15 @@
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="389dp">
 
-                <TextView
-                    android:id="@+id/entertainmentTxt"
+                <Button
+                    android:id="@+id/entertaimentBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Entertainment"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="271dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/entertainmentProgressBar"
@@ -228,14 +233,15 @@
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="488dp">
 
-                <TextView
-                    android:id="@+id/personalTxt"
+                <Button
+                    android:id="@+id/personalBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/PersonalCare"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="307dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/personalProgressBar"
@@ -261,14 +267,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="559dp">
 
-                <TextView
-                    android:id="@+id/healthCareTxt"
+                <Button
+                    android:id="@+id/healthBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/HealthCare"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="343dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/healthProgressBar"
@@ -294,14 +301,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="436dp">
 
-                <TextView
-                    android:id="@+id/emergencyTxt"
+                <Button
+                    android:id="@+id/emergencyBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/EmergencyFund"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="379dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/emergencyProgressBar"
@@ -327,14 +335,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="340dp">
 
-                <TextView
-                    android:id="@+id/savingTxt"
+                <Button
+                    android:id="@+id/savingBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Savings"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="415dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/savingProgressBar"
@@ -360,14 +369,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="436dp">
 
-                <TextView
-                    android:id="@+id/debtTxt"
+                <Button
+                    android:id="@+id/debtBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Debt"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="451dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/debtProgressBar"
@@ -392,14 +402,15 @@
                 tools:layout_editor_absoluteX="11dp"
                 tools:layout_editor_absoluteY="340dp">
 
-                <TextView
-                    android:id="@+id/otherTxt"
+                <Button
+                    android:id="@+id/otherBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/Other"
-                    android:textSize="24sp"
-                    tools:layout_editor_absoluteX="223dp"
-                    tools:layout_editor_absoluteY="406dp" />
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="27dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
                 <ProgressBar
                     android:id="@+id/otherProgressBar"
@@ -422,6 +433,8 @@
 
 
     </ScrollView>
+
+
 
 </android.support.constraint.ConstraintLayout>
 

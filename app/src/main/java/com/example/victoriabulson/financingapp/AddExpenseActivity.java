@@ -57,17 +57,19 @@ public class AddExpenseActivity extends AppCompatActivity {
         String category = spinner.getSelectedItem().toString();
         EditText editText = (EditText) findViewById(R.id.Description);
         String descpription = editText.getText().toString();
-        Transaction newItem = new Transaction(Double.parseDouble(editValue.getText().toString()), category, descpription);
+        double price;
+        if(editValue.getText().toString().trim().length() > 0) {
+            price = Double.parseDouble(editValue.getText().toString());
+        }
+        else{
+            price = 0;
+        }
+        Transaction newItem = new Transaction(price, category, descpription);
         for(int i = 0; i < 11; i++){
             if(expenseList.get(i).getCategoryName() == category){
-                if(editValue.getText().toString().trim().length() > 0) {
-                    double total = Double.parseDouble(editValue.getText().toString()) + expenseList.get(i).getSpent();
+                    double total = price + expenseList.get(i).getSpent();
                     expenseList.get(i).setSpent(total);
                     expenseList.get(i).addArray(newItem);
-                }
-                else{
-                    expenseList.get(i).setSpent(0);
-                }
             }
         }
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();

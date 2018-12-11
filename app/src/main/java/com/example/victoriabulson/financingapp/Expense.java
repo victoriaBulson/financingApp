@@ -13,7 +13,7 @@ class Expense implements Serializable {
     private double spent;
     private boolean fixed;
     private boolean beingUsed;
-    private ArrayList<Transaction> transactionList;
+    private ArrayList<Transaction> transactionList = new ArrayList<Transaction>();
 
     public Expense(){
         categoryName = null;

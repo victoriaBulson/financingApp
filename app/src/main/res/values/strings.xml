@@ -26,6 +26,7 @@
     <string name="Rent">Rent</string>
     <string name="Exit">Exit</string>
     <string name="Close">Close</string>
+    <string name="reportTxt">reportTxt</string>
     <string-array name="catagoryNameArray">
         <item>Rent</item>
         <item>Transport</item>

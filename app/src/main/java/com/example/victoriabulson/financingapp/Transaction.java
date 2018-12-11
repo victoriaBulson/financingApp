@@ -1,5 +1,7 @@
 package com.example.victoriabulson.financingapp;
 
+import java.util.ArrayList;
+
 /**
  * Setters and getters for the categories, locations, description for each expense
  */
@@ -9,6 +11,12 @@ class Transaction {
     private String description;
     private String location;
     private String category;
+
+    Transaction(double newPrice, String newCategory, String newDescription){
+        price = newPrice;
+        category = newCategory;
+        description = newDescription;
+    }
 
     public void setPrice(double price) {
         this.price = price;

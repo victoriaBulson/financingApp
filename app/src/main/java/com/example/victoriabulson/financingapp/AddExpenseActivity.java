@@ -54,12 +54,15 @@ public class AddExpenseActivity extends AppCompatActivity {
 
         EditText editValue = (EditText) findViewById(R.id.Amount);
         Spinner spinner = (Spinner)findViewById(R.id.catagoryNameSpinner);
-        String text = spinner.getSelectedItem().toString();
+        String category = spinner.getSelectedItem().toString();
+        String descpription = "fill in";
+        Transaction newItem = new Transaction(Double.parseDouble(editValue.getText().toString()), category, descpription);
         for(int i = 0; i < 11; i++){
-            if(expenseList.get(i).getCategoryName() == text){
+            if(expenseList.get(i).getCategoryName() == category){
                 if(editValue.getText().toString().trim().length() > 0) {
                     double total = Double.parseDouble(editValue.getText().toString()) + expenseList.get(i).getSpent();
                     expenseList.get(i).setSpent(total);
+                    //expenseList.get(i).addArray(newItem);
                 }
                 else{
                     expenseList.get(i).setSpent(0);
@@ -72,9 +75,9 @@ public class AddExpenseActivity extends AppCompatActivity {
         String expenseListString = gson.toJson(expenseList);
         preferencesEditor.putString("savedBudgetKey",expenseListString);
         preferencesEditor.apply();
-        Toast.makeText(this,expenseListString,Toast.LENGTH_SHORT).
+        //Toast.makeText(this,expenseListString,Toast.LENGTH_SHORT).
 
-        show();
+        //show();
 
         AddExpenseActivity.this.finish();
 }

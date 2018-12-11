@@ -62,7 +62,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                 if(editValue.getText().toString().trim().length() > 0) {
                     double total = Double.parseDouble(editValue.getText().toString()) + expenseList.get(i).getSpent();
                     expenseList.get(i).setSpent(total);
-                    //expenseList.get(i).addArray(newItem);
+                    expenseList.get(i).addArray(newItem);
                 }
                 else{
                     expenseList.get(i).setSpent(0);

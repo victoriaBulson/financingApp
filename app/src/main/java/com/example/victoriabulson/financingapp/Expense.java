@@ -1,6 +1,7 @@
 package com.example.victoriabulson.financingapp;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  * Categorization tool for expenses
@@ -12,6 +13,7 @@ class Expense implements Serializable {
     private double spent;
     private boolean fixed;
     private boolean beingUsed;
+    private ArrayList<Transaction> transactionList;
 
     public Expense(){
         categoryName = null;
@@ -69,5 +71,13 @@ class Expense implements Serializable {
 
     public boolean getFixed() {
         return fixed;
+    }
+
+    public void addArray(Transaction item) {
+        transactionList.add(item);
+    }
+
+    public ArrayList<Transaction> getArray() {
+        return transactionList;
     }
 }

@@ -10,6 +10,11 @@ class Transaction {
     private String location;
     private String category;
 
+    public Transaction(double newPrice, String newCategory){
+        price = newPrice;
+        category = newCategory;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }

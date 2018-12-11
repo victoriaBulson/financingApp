@@ -54,12 +54,15 @@ public class AddExpenseActivity extends AppCompatActivity {
 
         EditText editValue = (EditText) findViewById(R.id.Amount);
         Spinner spinner = (Spinner)findViewById(R.id.catagoryNameSpinner);
-        String text = spinner.getSelectedItem().toString();
+        String category = spinner.getSelectedItem().toString();
+        Double price = Double.parseDouble(editValue.getText().toString());
+        Transaction newItem = new Transaction(price, category);
         for(int i = 0; i < 11; i++){
-            if(expenseList.get(i).getCategoryName() == text){
+            if(expenseList.get(i).getCategoryName() == category){
                 if(editValue.getText().toString().trim().length() > 0) {
-                    double total = Double.parseDouble(editValue.getText().toString()) + expenseList.get(i).getSpent();
+                    double total = price + expenseList.get(i).getSpent();
                     expenseList.get(i).setSpent(total);
+                    expenseList.get(i).addArray(newItem);
                 }
                 else{
                     expenseList.get(i).setSpent(0);

@@ -108,6 +108,11 @@ public class ReportActivity extends AppCompatActivity {
         startActivity(plannerIntent);
     }
 
+    public void buttonClickTransaction(View view) {
+        Intent plannerIntent = new Intent(ReportActivity.this, TransactionReport.class);
+        startActivity(plannerIntent);
+    }
+
     public int percentBudget(int aval){
         return (int) ((expenseList.get(aval).getSpent() / expenseList.get(aval).getBudget())*100);
     }

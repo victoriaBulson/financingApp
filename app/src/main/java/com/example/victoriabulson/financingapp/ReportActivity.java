@@ -108,8 +108,9 @@ public class ReportActivity extends AppCompatActivity {
         startActivity(plannerIntent);
     }
 
-    public void buttonClickTransaction(View view) {
+    public void buttonClickTransaction(View view, int x) {
         Intent plannerIntent = new Intent(ReportActivity.this, TransactionReport.class);
+        plannerIntent.putExtra("bob", x);
         startActivity(plannerIntent);
     }
 
@@ -117,5 +118,38 @@ public class ReportActivity extends AppCompatActivity {
         return (int) ((expenseList.get(aval).getSpent() / expenseList.get(aval).getBudget())*100);
     }
 
+    public void buttonRent(View view){
+        buttonClickTransaction(view, 0);
+    }
+    public void buttonFood(View view){
+        buttonClickTransaction(view, 1);
+    }
+    public void buttonTransportation(View view){
+        buttonClickTransaction(view, 2);
+    }
+    public void buttonUtilies(View view){
+        buttonClickTransaction(view, 3);
+    }
+    public void buttonEntertainment(View view){
+        buttonClickTransaction(view, 4);
+    }
+    public void buttonPersonal(View view){
+        buttonClickTransaction(view, 5);
+    }
+    public void buttonHealth(View view){
+        buttonClickTransaction(view, 6);
+    }
+    public void buttonEmergency(View view){
+        buttonClickTransaction(view, 7);
+    }
+    public void buttonSavings(View view){
+        buttonClickTransaction(view, 8);
+    }
+    public void buttonDept(View view){
+        buttonClickTransaction(view, 9);
+    }
+    public void buttonOther(View view){
+        buttonClickTransaction(view, 10);
+    }
 
 }

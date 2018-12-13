@@ -33,29 +33,41 @@ public class TransactionReport extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_report);
         int x = 1;
+        // Getting the saved infomation so we can Display
         Gson gson = new Gson();
         savedBudget = PreferenceManager.getDefaultSharedPreferences(this);
         String json = savedBudget.getString("savedBudgetKey", null);
         Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
         expenseList = gson.fromJson(json, type);
 
+        // Getting which Catorgory is wanted to be displayed
         Intent intent = getIntent();
         int y = intent.getIntExtra("indexNum", x);
-
         linearLayout = findViewById(R.id.linear_layout);
+
+        // Moving the transaction array for the selected Item in to a new array
         List <Transaction> transactions = new ArrayList<Transaction>();
         transactions = expenseList.get(y).getArray();
+
         // Loops through the transaction area for the Catorgory that is selected
         for (int i = 0; i < transactions.size(); i++){
+
+            // Getting the Date to display correctly
             int month = transactions.get(i).getDate().getMonth();
             String strdate = String.valueOf(month + 1) + "/" + dateFormat.format(transactions.get(i).getDate());
+
+            // Add the description to the Date
             strdate += " - " + transactions.get(i).getDescription();
+
+            // Displaying the Date and Description
             TextView date = new TextView(this);
             date.setText(strdate);
             date.setTextSize(18);
             date.setLayoutParams(params);
             date.setPadding(100,0,0,0);
             linearLayout.addView(date);
+
+            // Displaying the Amount spent on the transaction
             TextView price = new TextView(this);
             price.setText("$" + String.format("%.02f",transactions.get(i).getPrice()));
             price.setLayoutParams(params);
@@ -63,6 +75,8 @@ public class TransactionReport extends AppCompatActivity {
             linearLayout.addView(price);
         }
     }
+
+    // Closing the Activity
     public void buttonClickClose(View view) {
         TransactionReport.this.finish();
     }

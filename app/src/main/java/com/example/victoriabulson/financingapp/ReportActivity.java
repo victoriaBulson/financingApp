@@ -110,11 +110,13 @@ public class ReportActivity extends AppCompatActivity {
     }
 
     public void buttonClickTransaction(View view, int x) {
+        // Checking if there is a Transaction History for the Catagory selected
         if (expenseList.get(x).getArray().size() != 0) {
             Intent plannerIntent = new Intent(ReportActivity.this, TransactionReport.class);
             plannerIntent.putExtra("indexNum", x);
             startActivity(plannerIntent);
         }
+        // Displaying a Toast to infom if there is no previous transaction history
         else {
             Toast.makeText(this, "No Transactions", Toast.LENGTH_SHORT).show();
         }
@@ -124,6 +126,7 @@ public class ReportActivity extends AppCompatActivity {
         return (int) ((expenseList.get(aval).getSpent() / expenseList.get(aval).getBudget())*100);
     }
 
+    // Functions to determine which Catorgory to display in Transaction Report
     public void buttonRent(View view){
         buttonClickTransaction(view, 0);
     }

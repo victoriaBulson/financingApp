@@ -34,29 +34,30 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         expenseList = gson.fromJson(json, type);
         Log.i("MAIN", "json != null");
 
+        // Importing the Old Budget into the Plannbudget
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
-        editValue.setText(Double.toString(expenseList.get(0).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(0).getBudget()));
         editValue = (EditText) findViewById(R.id.foodMoney);
-        editValue.setText(Double.toString(expenseList.get(1).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(1).getBudget()));
         editValue = (EditText) findViewById(R.id.transportationMoney);
-        editValue.setText(Double.toString(expenseList.get(2).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(2).getBudget()));
         editValue = (EditText) findViewById(R.id.utilitesMoney);
-        editValue.setText(Double.toString(expenseList.get(3).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(3).getBudget()));
         editValue = (EditText) findViewById(R.id.entertainmentMoney);
-        editValue.setText(Double.toString(expenseList.get(4).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(4).getBudget()));
         editValue = (EditText) findViewById(R.id.personalMoney);
-        editValue.setText(Double.toString(expenseList.get(5).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(5).getBudget()));
         editValue = (EditText) findViewById(R.id.healthMoney);
-        editValue.setText(Double.toString(expenseList.get(6).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(6).getBudget()));
         editValue = (EditText) findViewById(R.id.emergencyMoney);
-        editValue.setText(Double.toString(expenseList.get(7).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(7).getBudget()));
         editValue = (EditText) findViewById(R.id.savingsMoney);
-        editValue.setText(Double.toString(expenseList.get(8).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(8).getBudget()));
         editValue = (EditText) findViewById(R.id.debtMoney);
-        editValue.setText(Double.toString(expenseList.get(9).getBudget()));
+        editValue.setText(String.format("%.02f",expenseList.get(9).getBudget()));
         editValue = (EditText) findViewById(R.id.otherMoney);
-        editValue.setText(Double.toString(expenseList.get(10).getBudget()));
-
+        editValue.setText(String.format("%.02f",expenseList.get(10).getBudget()));
+        // Importing the Old Budget into the Plannbudget
         CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         checkBox.setChecked(expenseList.get(0).getFixed());
         checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);

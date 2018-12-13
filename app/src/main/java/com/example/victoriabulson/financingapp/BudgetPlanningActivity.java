@@ -250,7 +250,6 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         String expenseListString = gson.toJson(expenseList);
         preferencesEditor.putString("savedBudgetKey", expenseListString);
         preferencesEditor.apply();
-        //Toast.makeText(this, expenseListString,Toast.LENGTH_SHORT).show();
 
         BudgetPlanningActivity.this.finish();
     }

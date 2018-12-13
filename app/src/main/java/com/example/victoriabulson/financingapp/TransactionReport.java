@@ -25,7 +25,7 @@ public class TransactionReport extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
     public List<Expense> expenseList = new ArrayList<Expense>(11);
-    DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+    DateFormat dateFormat = new SimpleDateFormat("mm-dd-yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +60,6 @@ public class TransactionReport extends AppCompatActivity {
         }
     }
     public void buttonClickClose(View view) {
-        Intent plannerIntent = new Intent(TransactionReport.this, ReportActivity.class);
-        startActivity(plannerIntent);
+        TransactionReport.this.finish();
     }
 }

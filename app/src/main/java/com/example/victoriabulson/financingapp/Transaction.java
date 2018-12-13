@@ -19,7 +19,7 @@ class Transaction {
         price = newPrice;
         category = newCategory;
         description = newDescription;
-        date = Calendar.getInstance().getTime();
+        date = new Date();
     }
 
     public void setPrice(double price) {

@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 class Expense implements Serializable {
 
+    // Declares the Different Variable
     private String categoryName;
     private double budget;
     private double spent;
@@ -15,6 +16,7 @@ class Expense implements Serializable {
     private boolean beingUsed;
     private ArrayList<Transaction> transactionList = new ArrayList<Transaction>();
 
+    // Defualt Constuctor
     public Expense(){
         categoryName = null;
         budget = 0;
@@ -23,7 +25,7 @@ class Expense implements Serializable {
         beingUsed = true;
     }
 
-
+    // Creates the expense list with the
     public Expense(String category){
         setCategoryName(category);
         budget = 0;
@@ -32,7 +34,7 @@ class Expense implements Serializable {
         beingUsed = true;
     }
 
-
+    // Declares the getters and setters
     public void setUsed(boolean isUsed) {
         beingUsed = isUsed;
     }
@@ -80,7 +82,9 @@ class Expense implements Serializable {
     public ArrayList<Transaction> getArray() {
         return transactionList;
     }
-    public void setArray() {
+
+    // clears the Transaction array
+    public void clearArray() {
         transactionList = null;
     }
 }

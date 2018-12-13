@@ -73,16 +73,16 @@
         android:id="@+id/updateButton"
         android:layout_width="130dp"
         android:layout_height="68dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
         android:background="@android:color/holo_blue_dark"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/updateButtonTxt"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintEnd_toStartOf="@+id/addExpenseBtn"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/budgetLabel" />
 
@@ -90,17 +90,15 @@
         android:id="@+id/addExpenseBtn"
         android:layout_width="130dp"
         android:layout_height="68dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="68dp"
         android:background="@android:color/holo_blue_dark"
         android:fontFamily="sans-serif-smallcaps"
+        android:onClick="buttonAddExpense"
         android:text="@string/addExpenseButtonTxt"
         android:textColor="@android:color/white"
         android:textSize="24sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/updateButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/updateButton"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/reportButton"
@@ -116,7 +114,7 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateButton" />
 
@@ -124,7 +122,7 @@
         android:id="@+id/planBugetButton"
         android:layout_width="276dp"
         android:layout_height="63dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:background="@color/colorPrimary"
         android:fontFamily="sans-serif-smallcaps"
@@ -133,7 +131,7 @@
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/reportButton" />
 
@@ -169,6 +167,7 @@
         android:text="Reset Spent"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/planBugetButton" />
 
@@ -197,8 +196,10 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/budgetLabel"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571"
         app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
 
 </android.support.constraint.ConstraintLayout>

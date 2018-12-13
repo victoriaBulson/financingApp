@@ -14,6 +14,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,17 +45,19 @@ public class TransactionReport extends AppCompatActivity {
         linearLayout = findViewById(R.id.linear_layout);
         List <Transaction> transactions = new ArrayList<Transaction>();
         transactions = expenseList.get(y).getArray();
+        // Loops through the transaction area for the Catorgory that is selected
         for (int i = 0; i < transactions.size(); i++){
             int month = transactions.get(i).getDate().getMonth();
             String strdate = String.valueOf(month + 1) + "/" + dateFormat.format(transactions.get(i).getDate());
-            strdate += " " + transactions.get(i).getDescription();
+            strdate += " - " + transactions.get(i).getDescription();
             TextView date = new TextView(this);
             date.setText(strdate);
+            date.setTextSize(18);
             date.setLayoutParams(params);
             date.setPadding(100,0,0,0);
             linearLayout.addView(date);
             TextView price = new TextView(this);
-            price.setText(Double.toString(transactions.get(i).getPrice()));
+            price.setText("$" + String.format("%.02f",transactions.get(i).getPrice()));
             price.setLayoutParams(params);
             price.setPadding(100,0,0,50);
             linearLayout.addView(price);

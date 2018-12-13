@@ -8,29 +8,34 @@
 
     <TextView
         android:id="@+id/reportTitle"
-        android:layout_width="333dp"
+        android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="5dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="@string/detailed_report"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/closeBtn"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="buttonClickClose"
         android:text="@string/Close"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,9 +44,9 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="371dp"
-        android:layout_height="457dp"
+        android:layout_height="437dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +73,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonRent"
                     android:text="@string/Rent"
                     android:textSize="18sp"
@@ -84,6 +90,7 @@
                     android:id="@+id/rentSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -103,6 +110,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonFood"
                     android:text="@string/Food"
                     android:textSize="18sp"
@@ -119,6 +127,7 @@
                     android:id="@+id/foodSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -138,6 +147,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonTransportation"
                     android:text="@string/Transportation"
                     android:textSize="18sp"
@@ -154,6 +164,7 @@
                     android:id="@+id/transportSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -173,6 +184,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonUtilies"
                     android:text="@string/Utilities"
                     android:textSize="18sp"
@@ -189,6 +201,7 @@
                     android:id="@+id/utilitiesSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -208,6 +221,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonEntertainment"
                     android:text="@string/Entertainment"
                     android:textSize="18sp"
@@ -224,6 +238,7 @@
                     android:id="@+id/entertainmentSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -243,6 +258,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonPersonal"
                     android:text="@string/PersonalCare"
                     android:textSize="18sp"
@@ -259,6 +275,7 @@
                     android:id="@+id/personalSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -278,6 +295,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonHealth"
                     android:text="@string/HealthCare"
                     android:textSize="18sp"
@@ -294,6 +312,7 @@
                     android:id="@+id/healthSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -313,6 +332,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonEmergency"
                     android:text="@string/EmergencyFund"
                     android:textSize="18sp"
@@ -329,6 +349,7 @@
                     android:id="@+id/emergencySpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -348,6 +369,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonSavings"
                     android:text="@string/Savings"
                     android:textSize="18sp"
@@ -364,6 +386,7 @@
                     android:id="@+id/savingSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -383,6 +406,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonDept"
                     android:text="@string/Debt"
                     android:textSize="18sp"
@@ -399,6 +423,7 @@
                     android:id="@+id/debtSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -417,6 +442,7 @@
                     style="@style/Widget.AppCompat.Button.Colored"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:onClick="buttonOther"
                     android:text="@string/Other"
                     android:textSize="18sp"
@@ -433,6 +459,7 @@
                     android:id="@+id/otherSpent"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="@string/reportFiller"
                     android:textAlignment="center"
                     android:textSize="18sp" />
@@ -444,6 +471,34 @@
 
 
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/dot1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/reportTitle"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
+
+    <ImageView
+        android:id="@+id/dot2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/catagoryNameSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/reportTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
 
 
 

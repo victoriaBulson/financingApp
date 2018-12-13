@@ -80,4 +80,7 @@ class Expense implements Serializable {
     public ArrayList<Transaction> getArray() {
         return transactionList;
     }
+    public void setArray() {
+        transactionList = null;
+    }
 }

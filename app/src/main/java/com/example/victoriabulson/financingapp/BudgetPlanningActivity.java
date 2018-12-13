@@ -27,6 +27,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget_planning);
+        //Loading the old budget information
         Gson gson = new Gson();
         savedBudget  = PreferenceManager.getDefaultSharedPreferences(this);
         String json = savedBudget.getString("savedBudgetKey", null);
@@ -34,7 +35,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         expenseList = gson.fromJson(json, type);
         Log.i("MAIN", "json != null");
 
-        // Importing the Old Budget into the Plannbudget
+        // Importing the Old Budget into the Planbudget
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
         editValue.setText(String.format("%.02f",expenseList.get(0).getBudget()));
         editValue = (EditText) findViewById(R.id.foodMoney);
@@ -57,7 +58,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         editValue.setText(String.format("%.02f",expenseList.get(9).getBudget()));
         editValue = (EditText) findViewById(R.id.otherMoney);
         editValue.setText(String.format("%.02f",expenseList.get(10).getBudget()));
-        // Importing the Old Budget into the Plannbudget
+        // Importing if int the old budget was a Fixed amount or not
         CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         checkBox.setChecked(expenseList.get(0).getFixed());
         checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);
@@ -87,9 +88,10 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         Intent plannerIntent = new Intent(BudgetPlanningActivity.this, MainActivity.class);
 
     }
-
+    // Will save the new budget and close the activity
      public void buttonSave(View view) {
 
+        // Saves the amounts of the new budget over the old budget
         EditText editValue = (EditText) findViewById(R.id.rentMoney);
         Log.d("onSaved", editValue.getText().toString());
         if(editValue.getText().toString().trim().length() > 0) {
@@ -168,7 +170,7 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         else{
             expenseList.get(10).setBudget(0);
         }
-        // If fixed amount checkbox
+        // Saving if the New Budget is fixed or not
         CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(0).setFixed(true);
@@ -181,70 +183,61 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         } else {
             expenseList.get(1).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(2).setFixed(true);
         } else {
             expenseList.get(2).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(3).setFixed(true);
         } else {
             expenseList.get(3).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(4).setFixed(true);
         } else {
             expenseList.get(4).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.personalCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(5).setFixed(true);
         } else {
             expenseList.get(5).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.healthCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(6).setFixed(true);
         } else {
             expenseList.get(6).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(7).setFixed(true);
         } else {
             expenseList.get(7).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.savingCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(8).setFixed(true);
         } else {
             expenseList.get(8).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.debtCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(9).setFixed(true);
         } else {
             expenseList.get(9).setFixed(false);
         }
-
         checkBox = (CheckBox) findViewById(R.id.otherCheckBoxF);
         if (checkBox.isChecked()) {
             expenseList.get(10).setFixed(true);
         } else {
             expenseList.get(10).setFixed(false);
         }
-
+        // Saving the Budget to SharedPreferences and closing the activity
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();
 
         Gson gson = new Gson();

@@ -31,6 +31,7 @@ public class AddExpenseActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_expense);
         Gson gson = new Gson();
 
+        //loading the Expense array
         savedBudget = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
 
         String json = savedBudget.getString("savedBudgetKey", null);

@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
             createStorage();
             Log.i("MAIN_ACT", "json == null");
-            //Toast.makeText(this,"Created new array",Toast.LENGTH_SHORT).show();
         }
         else {
             Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
@@ -149,8 +148,6 @@ public class MainActivity extends AppCompatActivity {
         Expense otherObject = new Expense(getString(R.string.Other));
         expenseList.add(otherObject);
 
-        expenseList.get(0);
-
     }
 
 
@@ -167,6 +164,10 @@ public class MainActivity extends AppCompatActivity {
     public void buttonResetSpent(View view) {
         for(int i = 0; i < 11; i++){
             expenseList.get(i).setSpent(0);
+        }
+
+        for(int i = 0; i < 11; i++){
+            expenseList.get(i).setArray();
         }
 
         TextView ts = (TextView)findViewById(R.id.spentDisplay);

@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -39,6 +38,7 @@ public class AddExpenseActivity extends AppCompatActivity {
         }.getType();
         expenseList = gson.fromJson(json, type);
 
+        // Loads the Catagory Names into the spinner
         Spinner spinner = (Spinner) findViewById(R.id.catagoryNameSpinner);
         List<String> list = new ArrayList<String>();
         for (int i = 0; i < 11; i++){
@@ -51,20 +51,26 @@ public class AddExpenseActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new CustomOnItemSelectedListener());
 
     }
+
+    // Adds the Amount they spent to the old total
     public void buttonADD(View view) {
 
+        // Get the new amount, catagory name, and Discription
         EditText editValue = (EditText) findViewById(R.id.Amount);
         Spinner spinner = (Spinner)findViewById(R.id.catagoryNameSpinner);
         String category = spinner.getSelectedItem().toString();
         EditText editText = (EditText) findViewById(R.id.Description);
         String descpription = editText.getText().toString();
         double price;
+        // Checks is there is a amount in the input field
         if(editValue.getText().toString().trim().length() > 0) {
             price = Double.parseDouble(editValue.getText().toString());
         }
+        // if no amount was inputted making the amount zero
         else{
             price = 0;
         }
+        // Adds the transaction to the array
         Transaction newItem = new Transaction(price, category, descpription);
         for(int i = 0; i < 11; i++){
             if(expenseList.get(i).getCategoryName() == category){
@@ -73,6 +79,7 @@ public class AddExpenseActivity extends AppCompatActivity {
                     expenseList.get(i).addArray(newItem);
             }
         }
+        // saves the tranaction to shared preferences
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();
 
         Gson gson = new Gson();
@@ -80,6 +87,7 @@ public class AddExpenseActivity extends AppCompatActivity {
         preferencesEditor.putString("savedBudgetKey",expenseListString);
         preferencesEditor.apply();
 
+        // closes the activity
         AddExpenseActivity.this.finish();
 }
 }

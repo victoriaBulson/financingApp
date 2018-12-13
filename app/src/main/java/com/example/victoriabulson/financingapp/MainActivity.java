@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
           double old = totalbudget;
           totalbudget = old + budget;
         }
-        tv.setText(Double.toString(totalbudget));
+        tv.setText(String.format("%.02f",totalbudget));
         double totalSpent = 0;
         TextView ts = (TextView)findViewById(R.id.spentDisplay);
         for (int i = 0; i <11; i++){
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             double old = totalSpent;
             totalSpent = old + budget;
         }
-        ts.setText(Double.toString(totalSpent));
+        ts.setText(String.format("%.02f",totalSpent));
 
         Double spentProgress = (totalSpent/totalbudget) * 100;
         ProgressBar spentProgressDisplay = findViewById(R.id.budgProgBar);

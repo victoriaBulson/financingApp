@@ -79,29 +79,6 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         checkBox.setChecked(expenseList.get(9).getFixed());
         checkBox = (CheckBox) findViewById(R.id.otherCheckBoxF);
         checkBox.setChecked(expenseList.get(10).getFixed());
-        // If in used checkboxs
-        checkBox = (CheckBox) findViewById(R.id.rentCheckBoxA);
-        checkBox.setChecked(expenseList.get(0).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxA);
-        checkBox.setChecked(expenseList.get(1).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxA);
-        checkBox.setChecked(expenseList.get(2).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxA);
-        checkBox.setChecked(expenseList.get(3).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxA);
-        checkBox.setChecked(expenseList.get(4).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxA);
-        checkBox.setChecked(expenseList.get(5).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxA);
-        checkBox.setChecked(expenseList.get(6).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxA);
-        checkBox.setChecked(expenseList.get(7).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxA);
-        checkBox.setChecked(expenseList.get(8).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxA);
-        checkBox.setChecked(expenseList.get(9).getUsed());
-        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxA);
-        checkBox.setChecked(expenseList.get(10).getUsed());
     }
 
 
@@ -265,83 +242,6 @@ public class BudgetPlanningActivity extends AppCompatActivity {
             expenseList.get(10).setFixed(true);
         } else {
             expenseList.get(10).setFixed(false);
-        }
-        // If in used checkboxs
-        checkBox = (CheckBox) findViewById(R.id.rentCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(0).setUsed(true);
-        } else {
-            expenseList.get(0).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(1).setUsed(true);
-        } else {
-            expenseList.get(1).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(2).setUsed(true);
-        } else {
-            expenseList.get(2).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(3).setUsed(true);
-        } else {
-            expenseList.get(3).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(4).setUsed(true);
-        } else {
-            expenseList.get(4).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(5).setUsed(true);
-        } else {
-            expenseList.get(5).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(6).setUsed(true);
-        } else {
-            expenseList.get(6).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(7).setUsed(true);
-        } else {
-            expenseList.get(7).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(8).setUsed(true);
-        } else {
-            expenseList.get(8).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(9).setUsed(true);
-        } else {
-            expenseList.get(9).setUsed(false);
-        }
-
-        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxA);
-        if (checkBox.isChecked()) {
-            expenseList.get(10).setUsed(true);
-        } else {
-            expenseList.get(10).setUsed(false);
         }
 
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();

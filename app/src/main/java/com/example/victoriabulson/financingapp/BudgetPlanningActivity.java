@@ -56,6 +56,29 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         editValue.setText(Double.toString(expenseList.get(9).getBudget()));
         editValue = (EditText) findViewById(R.id.otherMoney);
         editValue.setText(Double.toString(expenseList.get(10).getBudget()));
+
+        CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
+        checkBox.setChecked(expenseList.get(0).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);
+        checkBox.setChecked(expenseList.get(1).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxF);
+        checkBox.setChecked(expenseList.get(2).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxF);
+        checkBox.setChecked(expenseList.get(3).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxF);
+        checkBox.setChecked(expenseList.get(4).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxF);
+        checkBox.setChecked(expenseList.get(5).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxF);
+        checkBox.setChecked(expenseList.get(6).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxF);
+        checkBox.setChecked(expenseList.get(7).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxF);
+        checkBox.setChecked(expenseList.get(8).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxF);
+        checkBox.setChecked(expenseList.get(9).getFixed());
+        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxF);
+        checkBox.setChecked(expenseList.get(10).getFixed());
     }
 
 
@@ -143,6 +166,82 @@ public class BudgetPlanningActivity extends AppCompatActivity {
         }
         else{
             expenseList.get(10).setBudget(0);
+        }
+        // If fixed amount checkbox
+        CheckBox checkBox = (CheckBox) findViewById(R.id.rentCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(0).setFixed(true);
+        } else {
+            expenseList.get(0).setFixed(false);
+        }
+        checkBox = (CheckBox) findViewById(R.id.foodCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(1).setFixed(true);
+        } else {
+            expenseList.get(1).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.transportationCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(2).setFixed(true);
+        } else {
+            expenseList.get(2).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.utilitiesCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(3).setFixed(true);
+        } else {
+            expenseList.get(3).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.entertainCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(4).setFixed(true);
+        } else {
+            expenseList.get(4).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.personalCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(5).setFixed(true);
+        } else {
+            expenseList.get(5).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.healthCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(6).setFixed(true);
+        } else {
+            expenseList.get(6).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.emergencyCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(7).setFixed(true);
+        } else {
+            expenseList.get(7).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.savingCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(8).setFixed(true);
+        } else {
+            expenseList.get(8).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.debtCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(9).setFixed(true);
+        } else {
+            expenseList.get(9).setFixed(false);
+        }
+
+        checkBox = (CheckBox) findViewById(R.id.otherCheckBoxF);
+        if (checkBox.isChecked()) {
+            expenseList.get(10).setFixed(true);
+        } else {
+            expenseList.get(10).setFixed(false);
         }
 
         SharedPreferences.Editor preferencesEditor = savedBudget.edit();

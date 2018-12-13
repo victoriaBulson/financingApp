@@ -25,7 +25,7 @@ public class TransactionReport extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
     public List<Expense> expenseList = new ArrayList<Expense>(11);
-    DateFormat dateFormat = new SimpleDateFormat("mm-dd-yyyy");
+    DateFormat dateFormat = new SimpleDateFormat("dd/yyyy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +45,8 @@ public class TransactionReport extends AppCompatActivity {
         List <Transaction> transactions = new ArrayList<Transaction>();
         transactions = expenseList.get(y).getArray();
         for (int i = 0; i < transactions.size(); i++){
-            String strdate = dateFormat.format(transactions.get(i).getDate());
+            int month = transactions.get(i).getDate().getMonth();
+            String strdate = String.valueOf(month + 1) + "/" + dateFormat.format(transactions.get(i).getDate());
             strdate += " " + transactions.get(i).getDescription();
             TextView date = new TextView(this);
             date.setText(strdate);

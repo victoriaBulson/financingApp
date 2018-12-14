@@ -30,6 +30,7 @@ public class TransactionReport extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_report);
         int x = 1;
@@ -40,16 +41,20 @@ public class TransactionReport extends AppCompatActivity {
         Type type = new TypeToken<ArrayList<Expense>>(){}.getType();
         expenseList = gson.fromJson(json, type);
 
-        // Getting which Catorgory is wanted to be displayed
+        // Getting which Category is wanted to be displayed
         Intent intent = getIntent();
         int y = intent.getIntExtra("indexNum", x);
         linearLayout = findViewById(R.id.linear_layout);
+
+        //Displays the title of the report
+        TextView titleName = findViewById(R.id.titleDisplay);
+        titleName.setText(expenseList.get(y).getCategoryName());
 
         // Moving the transaction array for the selected Item in to a new array
         List <Transaction> transactions = new ArrayList<Transaction>();
         transactions = expenseList.get(y).getArray();
 
-        // Loops through the transaction area for the Catorgory that is selected
+        // Loops through the transaction area for the Category that is selected
         for (int i = 0; i < transactions.size(); i++){
 
             // Getting the Date to display correctly

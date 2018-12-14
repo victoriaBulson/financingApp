@@ -438,6 +438,7 @@
         android:text="Fixed"
         android:textAlignment="center"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/budgetTxt"
         app:layout_constraintStart_toStartOf="parent" />
 

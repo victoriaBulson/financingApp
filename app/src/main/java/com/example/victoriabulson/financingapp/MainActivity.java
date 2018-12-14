@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     public SharedPreferences savedBudget;
     public List<Expense> expenseList = new ArrayList<Expense>(11);
-    public Expense thing;
 
     @Override
     /**
@@ -121,10 +120,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void createStorage(){
 
-
-        thing = new Expense("thing");
-
-
+        // Creates budget array if one doesn't exist in SharedPreferences
         Expense rentObject = new Expense(getString(R.string.Rent));
         expenseList.add(rentObject);
         Expense foodObject = new Expense(getString(R.string.Food));
@@ -150,26 +146,30 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    // opens activity to display catagories budget and how much has been spent
     public void buttonClickReport(View view) {
         Intent plannerIntent = new Intent(MainActivity.this, ReportActivity.class);
         startActivity(plannerIntent);
     }
-
+    // opens activity to add expenses
     public void buttonAddExpense(View view) {
         Intent plannerIntent = new Intent(MainActivity.this, AddExpenseActivity.class);
         startActivity(plannerIntent);
     }
 
+    // Resets the spent amount and transaction array
     public void buttonResetSpent(View view) {
+        // Sets all spent catagories to 0
         for(int i = 0; i < 11; i++){
             expenseList.get(i).setSpent(0);
         }
 
+        // resets the transaction array
         for(int i = 0; i < 11; i++){
-            expenseList.get(i).setArray();
+            expenseList.get(i).clearArray();
         }
 
+        // sets spent display to 0.00
         TextView ts = (TextView)findViewById(R.id.spentDisplay);
         ts.setText("0.00");
         ProgressBar spentProgressDisplay = findViewById(R.id.budgProgBar);

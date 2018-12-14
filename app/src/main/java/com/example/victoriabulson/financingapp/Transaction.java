@@ -9,12 +9,14 @@ import java.util.Date;
  */
 class Transaction {
 
+    // Declares all the different variables
     private double price;
     private String description;
     private String location;
     private String category;
     private Date date;
 
+    // Creates a transaction object
     Transaction(double newPrice, String newCategory, String newDescription){
         price = newPrice;
         category = newCategory;
@@ -22,6 +24,7 @@ class Transaction {
         date = new Date();
     }
 
+    // Declares all the setters and getters for the function
     public void setPrice(double price) {
         this.price = price;
     }
